@@ -7,8 +7,21 @@
     <style>
     	* { padding: 0; margin: 0; }
     	canvas { background: #eee; display: block; margin: 0 auto; }
+        
+        button {
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
     </style>
 </head>
+    <div style="text-align: center">
+        <button onclick="draw(); this.disabled = true">Play</button>
+        <button onclick="">Shop</button>
+    </div>
 <body>
 
 <canvas id="myCanvas" width="480" height="320"></canvas>
@@ -179,8 +192,14 @@ function draw() {
   y += dy;
   requestAnimationFrame(draw);
 }
-
-draw();
+    
+function menu() {
+    ctx.font = "24px Arial";
+    ctx.textAlign = "center";
+    ctx.fillText("Agile Masters", canvas.width/2, canvas.height/2);
+}
+    
+menu();
 </script>
 
 </body>
